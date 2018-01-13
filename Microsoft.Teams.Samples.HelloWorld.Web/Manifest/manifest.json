@@ -2,7 +2,7 @@
   "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
   "manifestVersion": "1.0",
   "version": "1.0.0",
-  "id": "00000000-0000-0000-0000-000000000000",
+  "id": " 00000000-0000-0000-0000-000000000000",
   "packageName": "com.contoso.helloworld",
   "developer": {
     "name": "Contoso",
@@ -10,14 +10,18 @@
     "privacyUrl": "https://www.microsoft.com/privacy",
     "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
   },
-  "name": "Hello World App for Microsoft Teams",
-  "description": "This sample app provides a very simple app for Microsoft Teams. You can extend this to add more content and capabilities.",
-  "icons": [
-    {
-      "color": "contoso96x96.png",
-      "outline": "contoso20x20.png"
-    }
-  ],
+  "name": {
+    "short": "Hello World",
+    "full": "Hello World App for Microsoft Teams"
+  },
+  "description": {
+    "short": "Hello World App for Microsoft Teams",
+    "full": "This sample app provides a very simple app for Microsoft Teams. You can extend this to add more content and capabilities."
+  },
+  "icons": {
+    "outline": "contoso20x20.png",
+    "color": "contoso96x96.png"
+  },
   "accentColor": "#60A18E",
   "staticTabs": [
     {
