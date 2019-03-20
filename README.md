@@ -1,3 +1,13 @@
+---
+topic: sample
+products:
+- Office 365
+languages:
+- CSS
+extensions:
+  contentType: samples
+  createdDate: 10/16/2017 10:02:21 PM
+---
 
 # Contributing
 
