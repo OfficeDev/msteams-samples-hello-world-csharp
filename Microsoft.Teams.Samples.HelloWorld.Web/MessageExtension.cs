@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Connector.Teams;
@@ -43,7 +44,7 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web
             {
                 Title = !string.IsNullOrWhiteSpace(title) ? title : Faker.Lorem.Sentence(),
                 Text = Faker.Lorem.Paragraph(),
-                Images = { new CardImage("http://lorempixel.com/640/480?rand=" + DateTime.Now.Ticks.ToString()) }
+                Images = new List<CardImage> { new CardImage("http://lorempixel.com/640/480?rand=" + DateTime.Now.Ticks.ToString()) }
             };
 
             return card
