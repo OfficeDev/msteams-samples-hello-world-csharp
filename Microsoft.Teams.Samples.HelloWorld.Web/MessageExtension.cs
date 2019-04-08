@@ -43,9 +43,9 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web
             {
                 Title = !string.IsNullOrWhiteSpace(title) ? title : Faker.Lorem.Sentence(),
                 Text = Faker.Lorem.Paragraph(),
-                Images = { new CardImage("http://lorempixel.com/640/480?rand=" + DateTime.Now.Ticks.ToString()) }
+               Images = new System.Collections.Generic.List<CardImage> { new CardImage("http://lorempixel.com/640/480?rand=" + DateTime.Now.Ticks.ToString()) }
             };
-
+            
             return card
                 .ToAttachment()
                 .ToComposeExtensionAttachment();
