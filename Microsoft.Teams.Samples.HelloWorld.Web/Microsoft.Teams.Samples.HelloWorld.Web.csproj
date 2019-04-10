@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.props" Condition="Exists('..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -55,8 +56,20 @@
     <Reference Include="Chronic, Version=0.3.2.0, Culture=neutral, PublicKeyToken=3bd1f1ef638b0d3c, processorArchitecture=MSIL">
       <HintPath>..\packages\Chronic.Signed.0.3.2\lib\net40\Chronic.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Faker.NET45, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Faker.Net.1.1.1\lib\net452\Faker.NET45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Documents.Client, Version=1.22.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.DocumentDB.1.22.0\lib\net45\Microsoft.Azure.Documents.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bot.Builder, Version=3.19.1.44133, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bot.Builder.3.19.1.44133\lib\net46\Microsoft.Bot.Builder.dll</HintPath>
@@ -64,18 +77,36 @@
     <Reference Include="Microsoft.Bot.Builder.Autofac, Version=3.19.1.44133, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bot.Builder.3.19.1.44133\lib\net46\Microsoft.Bot.Builder.Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bot.Connector, Version=3.19.1.44133, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bot.Connector.3.19.1.44133\lib\net46\Microsoft.Bot.Connector.dll</HintPath>
+    <Reference Include="Microsoft.Bot.Builder.Azure, Version=3.16.3.40383, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bot.Builder.Azure.3.16.3.40383\lib\net46\Microsoft.Bot.Builder.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bot.Builder.History, Version=3.16.1.38846, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bot.Builder.History.3.16.1.38846\lib\net46\Microsoft.Bot.Builder.History.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bot.Connector, Version=3.20.1.42, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bot.Connector.3.20.1\lib\net46\Microsoft.Bot.Connector.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bot.Connector.Teams, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f300afd708cefcd3, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bot.Connector.Teams.0.9.0\lib\net46\Microsoft.Bot.Connector.Teams.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bot.Schema, Version=4.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bot.Schema.4.3.2\lib\netstandard2.0\Microsoft.Bot.Schema.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=4.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.4.4.1\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.7.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.4.5.0\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.3.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
@@ -96,7 +127,10 @@
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.3.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.18\lib\net452\Microsoft.Rest.ClientRuntime.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.20\lib\net461\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.2.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -117,6 +151,9 @@
     </Reference>
     <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -250,9 +287,12 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.props'))" />
+    <Error Condition="!Exists('..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Azure.DocumentDB.1.22.0\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Azure.DocumentDB.1.22.0\build\Microsoft.Azure.DocumentDB.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>powershell.exe Compress-Archive -Path $(ProjectDir)Manifest\* -DestinationPath $(TargetDir)helloworldapp.zip -Force</PostBuildEvent>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)Manifest\*\" -DestinationPath \"$(TargetDir)helloworldapp.zip\" -Force</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -267,4 +307,6 @@
     <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
     <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
   </Target>
+  <Import Project="..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.targets" Condition="Exists('..\packages\SourceLink.Create.CommandLine.2.8.3\build\SourceLink.Create.CommandLine.targets')" />
+  <Import Project="..\packages\Microsoft.Azure.DocumentDB.1.22.0\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\packages\Microsoft.Azure.DocumentDB.1.22.0\build\Microsoft.Azure.DocumentDB.targets')" />
 </Project>
