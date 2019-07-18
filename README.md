@@ -1,11 +1,13 @@
 ---
 topic: sample
 products:
-- Office 365
+- office-365
 languages:
-- CSS
+- csharp
 extensions:
   contentType: samples
+  platforms:
+  - CSS
   createdDate: 10/16/2017 10:02:21 PM
 ---
 
