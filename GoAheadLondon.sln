@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Teams.Samples.HelloWorld.Web", "Microsoft.Teams.Samples.HelloWorld.Web\Microsoft.Teams.Samples.HelloWorld.Web.csproj", "{E7A02B0D-A563-4CB8-AC6B-1D85272C5D7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoAheadLondon", "GoAheadLondon\GoAheadLondon.csproj", "{E7A02B0D-A563-4CB8-AC6B-1D85272C5D7F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E84CE1F7-CF62-4588-B813-3C6D9741D04E}"
 	ProjectSection(SolutionItems) = preProject

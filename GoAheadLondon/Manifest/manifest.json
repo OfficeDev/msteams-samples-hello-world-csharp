@@ -1,0 +1,47 @@
+﻿{
+  "$schema": "https://statics.teams.cdn.office.net/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "version": "1.0.0",
+  "id": "36c4d2c9-0231-4292-a666-6eb3a3ce14da",
+  "packageName": "com.contoso.helloworld",
+  "developer": {
+    "name": "Contoso",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "Go-Ahead London",
+    "full": "Go-Ahead"
+  },
+  "description": {
+    "short": "Hello World App for Microsoft Teams",
+    "full": "This sample app provides a very simple app. You can extend this to add more content and capabilities."
+  },
+  "icons": {
+    "outline": "GoAheadLondon20x20.png",
+    "color": "GoAheadLondon96x96.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "com.contoso.helloworld.hellotab",
+      "name": "Home",
+      "contentUrl": "https://9dd21f42.ngrok.io/hello",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://006cf476.ngrok.io/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "permissions": [],
+  "validDomains": []
+}

@@ -16,8 +16,8 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web.Controllers
             return View("Index");
         }
 
-        [Route("first")]
-        public ActionResult First()
+        [Route("home")]
+        public ActionResult Home()
         {
             return View();
         }
