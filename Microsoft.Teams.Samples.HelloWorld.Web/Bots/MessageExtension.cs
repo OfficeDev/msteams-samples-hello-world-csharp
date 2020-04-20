@@ -74,7 +74,7 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web
 
         protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
         {
-                   
+
             return Task.FromResult(new MessagingExtensionResponse
             {
                 ComposeExtension = new MessagingExtensionResult
@@ -83,8 +83,8 @@ namespace Microsoft.Teams.Samples.HelloWorld.Web
                     Type = "result",
                     Attachments = new MessagingExtensionAttachment[]{
                         new ThumbnailCard()
-                                    .ToAttachment()
-                                    .ToMessagingExtensionAttachment()
+                            .ToAttachment()
+                            .ToMessagingExtensionAttachment()
                     }
                 },
             });
