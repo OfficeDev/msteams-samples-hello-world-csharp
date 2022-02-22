@@ -12,7 +12,7 @@ extensions:
   - CSS
   createdDate: 10/16/2017 10:02:21 PM
 ---
-
+#### **NOTE:** This repository is now archived. Its contents have moved [here](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp).
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
